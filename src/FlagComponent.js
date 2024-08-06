@@ -10,8 +10,7 @@ const FlagComponent = () => {
             try {
                 const response = await fetch('https://wgg522pwivhvi5gqsn675gth3q0otdja.lambda-url.us-east-1.on.aws/677261');
                 const data = await response.text();
-                console.log('Fetched data:', data); // Log fetched data
-                setFlag(data.trim()); // Set the flag
+                setFlag(data.trim());
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching the flag:', error);
